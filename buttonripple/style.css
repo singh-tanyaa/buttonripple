@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;1,600&family=Lobster&display=swap');
+/*font-family: 'IBM Plex Mono', monospace;
+font-family: 'Lobster', cursive;*/
+body{
+    margin:0;
+    display:flex;
+    justify-content:center;
+    height:100vh;
+    align-items: center;
+    background-color: rgb(204, 174, 204);
+    font-family: 'IBM Plex Mono','Lobster', 'cursive',' monospace';
+}
+.btn{
+    background-color: aqua;
+    padding:20px 40px;
+    border-radius: 20px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.5);
+    text-decoration: none;
+    color:black;
+    position:relative;
+    overflow:hidden;
+}
+.btn::before{
+    content:"";
+    position:absolute;
+    background-color: rgb(90, 49, 179);
+    width:0;
+    height:0;
+    left:var(--xPos);
+    
+    top:var(--yPos);
+    transform:translate(-50%,-50%);
+    border-radius:50%;
+    transition:width .5s,height.5s;
+    
+}
+.btn:hover::before{
+    width:300px;
+    height:300px;
+}
+.btn span{
+    position:relative;
+    z-index: 1;
+}
